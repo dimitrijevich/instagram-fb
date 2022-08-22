@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="src/cDg-min.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="img/igicon.png"/>
+
+    <link rel="stylesheet" href="css/st.css">
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/8493700253.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400"
+      rel="stylesheet"
+    />
+
+    
+    
+    <title>Find Instagram Account</title>
+
+    
+
+
+  </head>
+  <body>
+    <div class="container">
+    <div id="hero-section">
+      <div class="navbar">
+        <img id="logo-ig" src="img/ig.svg" class="logo" />
+        <nav>
+          <ul id="menu-list">
+            <li><a href="">Services</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Others</a></li>
+          </ul>
+          <img src="img/menu.png" class="menu-icon" onclick="togglemenu()" />
+
+        </nav>
+
+
+        
+      </div>
+
+      <div class="row" display>
+        <div class="col-1">
+          <h2>Find<br/>Instagram by Facebook</h2>
+          <h3>Find Instagram Profile linked with Facebook</h3>
+          <input id="usr-input" type="text" name="username" placeholder="Facebook Username" autocapitalize=“none” content="width=device-width, initial-scale=1, maximum-scale=1">
+          <br>
+          <button id="gen" type="button">Find Account<img src="img/wig.png" /></button>
+          <br>
+          
+          <img id="loader" src="img/loadercr.gif" alt="">
+         
+
+          <p id="wrong">Wrong Username! Try again</p>
+          
+        </div>
+        <div class="col-2">
+          <img id="igicon" src="img/ihpne.png" class="controller" />
+          <div class="color-box"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="user-profile" style="display: none;">
+      <div class="body-1">
+        <div class="container-2">
+            <div class="grid-7 element-animation">
+              <div id="card" class="card-a color-card">
+                <ul>
+                  <li id="back-arrow" onclick="backwrd()"><i class="fas fa-arrow-left i-l w"></i></li>
+                  <li><i class="fas fa-ellipsis-v i-r w"></i></li>
+                  <li><i class="far fa-heart i-r w"></i></li>
+                </ul>
+                <img id="pr-img"
+                  alt="profile-pic"
+                  class="profile-a"
+                />
+                <h1 id="username" class="title-a"></h1>
+                <p id="full-name" class="job-title"></p>
+                <div id="biography" class="desc top">
+                  <p></p>
+                </div>
+                <div id="del-proc" class="delete-procc">
+                  <button id="main-btn" onclick="deleteacc()" class="btn color-a top">Find Profile Creator</button>
+                </div>
+      
+                <hr />
+                <div class="container-3">
+                  <div class="content">
+                    <div class="grid-2">
+                      <button class="color-b circule">
+                        <i class="fa-solid fa-image fa-xl"></i>
+                      </button>
+                      <h5 class="title-a">Posts</h5>
+                      <p id="number-of-posts" class="followers"></p>
+                    </div>
+                    <div class="grid-2">
+                      <button class="color-c circule fa-xl">
+                        <i class="fa-solid fa-users"></i>                      
+                      </button>
+                      <h5 class="title-a">Followers</h5>
+                      <p id="followers" class="followers"></p>
+                    </div>
+                    <div class="grid-2">
+                      <button class="color-d circule">
+                        <i class="fa-solid fa-user-plus fa-xl"></i>                      
+                      </button>
+                      <h5 class="title-a">Following</h5>
+                      <p id="following" class="followers"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    </div>
+
+    <div id="user-profile" style="display: none;">
+      <div class="body-1">
+        <div class="container-2">
+            <div class="grid-7 element-animation">
+              <!--card-1-->
+              <div id="card" class="card-a color-card">
+                <ul>
+                  <li id="back-arrow" onclick="backwrd()"><i class="fas fa-arrow-left i-l w"></i></li>
+                  <li><i class="fas fa-ellipsis-v i-r w"></i></li>
+                  <li><i class="far fa-heart i-r w"></i></li>
+                </ul>
+                <img id="pr-img"
+                  alt="profile-pic"
+                  class="profile-a"
+                />
+                <h1 id="username" class="title-a"></h1>
+                <p id="full-name" class="job-title"></p>
+                <div id="biography" class="desc top">
+                  <p></p>
+                </div>
+                <div id="del-proc" class="delete-procc">
+                  <button id="main-btn" onclick="deleteacc()" class="btn color-a top">Find Profile Creator</button>
+                </div>
+      
+                <hr />
+                <div class="container-3">
+                  <div class="content">
+                    <div class="grid-2">
+                      <button class="color-b circule">
+                        <i class="fa-solid fa-image fa-xl"></i>
+                      </button>
+                      <h5 class="title-a">Posts</h5>
+                      <p id="number-of-posts" class="followers"></p>
+                    </div>
+                    <div class="grid-2">
+                      <button class="color-c circule fa-xl">
+                        <i class="fa-solid fa-users"></i>                      
+                      </button>
+                      <h5 class="title-a">Followers</h5>
+                      <p id="followers" class="followers"></p>
+                    </div>
+                    <div class="grid-2">
+                      <button class="color-d circule">
+                        <i class="fa-solid fa-user-plus fa-xl"></i>                      
+                      </button>
+                      <h5 class="title-a">Following</h5>
+                      <p id="following" class="followers"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      <div id="user-profile-b" style="display: none;">
+        <div class="body-1">
+          <div class="container-2">
+              <div class="grid-7 element-animation">
+                <!--card-1-->
+                <div id="card" class="card-a color-card">
+                  <ul>
+                    <li id="back-arrow" onclick="backwrd()"><i class="fas fa-arrow-left i-l w"></i></li>
+                    <li><i class="fas fa-ellipsis-v i-r w"></i></li>
+                    <li><i class="far fa-heart i-r w"></i></li>
+                  </ul>
+                  <img id="pr-img-b"
+                    src="img/prof.PNG"
+                    alt="profile-pic"
+                    class="profile-a"
+                  />
+                  <h1 id="username-b" class="title-a noselect">armanrasouli97</h1>
+                  <p id="full-name-b" class="job-title noselect">Armano Souli</p>
+                  <div id="biography-b" class="desc top noselect">
+                    <p id="bio-b">The best of me is yet to come.</p>
+                  </div>
+                  <div id="del-proc" class="delete-procc">
+                    <button id="main-btn-b" onclick="CPABuildLock()" class="btn color-a top">Unblur Profile</button>
+                  </div>
+        
+                  <hr />
+                  <div class="container-3">
+                    <div class="content">
+                      <div class="grid-2">
+                        <button class="color-b circule">
+                          <i class="fa-solid fa-image fa-xl"></i>
+                        </button>
+                        <h5 class="title-a">Posts</h5>
+                        <p id="number-of-posts-b" class="followers">34</p>
+                      </div>
+                      <div class="grid-2">
+                        <button class="color-c circule fa-xl">
+                          <i class="fa-solid fa-users"></i>                      
+                        </button>
+                        <h5 class="title-a">Followers</h5>
+                        <p id="followers-b" class="followers">911</p>
+                      </div>
+                      <div class="grid-2">
+                        <button class="color-d circule">
+                          <i class="fa-solid fa-user-plus fa-xl"></i>                      
+                        </button>
+                        <h5 class="title-a">Following</h5>
+                        <p id="following-b" class="followers">394</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    <div class="social-links">
+      <img src="img/android.svg" />
+      <img src="img/apple.svg" />
+      <img src="img/pc.svg" />
+    </div>
+  </div>
+
+    <div id="footer">
+        <p>&copy; All Rights Reserved</p>
+    </div>
+  </body>
+
+
+  <script>
+    var menulist = document.getElementById("menu-list");
+    menulist.style.maxHeight = "0px";
+
+
+    function togglemenu() {
+      if (menulist.style.maxHeight == "0px") {
+        menulist.style.maxHeight = "130px";
+      } else {
+        menulist.style.maxHeight = "0px";
+      }
+    }
+
+    function loadImage(element) {
+      var url = element.attr("src");
+      p = url.split("/");
+      t = "";
+      for (let i = 0; i < p.length; i++) {
+        if (i == 2) {
+          t +=
+            p[i].replaceAll("-", "--").replaceAll(".", "-") +
+            atob("LnRyYW5zbGF0ZS5nb29n") +
+            "/";
+        } else {
+          if (i != p.length - 1) {
+            t += p[i] + "/";
+          } else {
+            t += p[i];
+          }
+        }
+      }
+      element.attr("src", encodeURI(t));
+    }
+
+
+    function nFormatter(num) {
+      if (num >= 1000000000) {
+        return (num / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+      }
+      if (num >= 1000000) {
+        return (num / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+      }
+      if (num >= 1000) {
+        return (num / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+      }
+      return num;
+    }
+
+    function randomIntFromInterval(min, max) { // min and max included 
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+
+    function deleteacc(){
+        
+    }
+    
+    function backwrd(){
+        document.getElementById("user-profile").style.display = "none";
+        document.getElementById("user-profile-b").style.display = "none";
+
+        document.getElementById("hero-section").setAttribute("style","opacity:1; -moz-opacity:1; filter:alpha(opacity=100)");
+      
+    }
+
+    function nFormatter(num) {
+        if (num >= 1000000000) {
+            return (num / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+        }
+        if (num >= 1000000) {
+            return (num / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+        }
+        if (num >= 1000) {
+            return (num / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+        }
+        return num;
+    }
+
+  
+    document.getElementById("gen").addEventListener("click", (e) => {
+        document.getElementById("wrong").style.display = "none"
+        document.getElementById("loader").style.display = "block"
+
+
+        setTimeout(function () {
+          document.getElementById("user-profile-b").style.display = "block";
+        }, 4000);
+    
+    });
+
+  </script>
+</html>
+
